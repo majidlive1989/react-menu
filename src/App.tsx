@@ -166,8 +166,8 @@ function App() {
 
       <ul className=" grid grid-cols-2 grid-rows-5 p-8  gap-5">
         {items.map((item) => (
-          <li className="" key={item.id}>
-            <div className="flex flex-row gap-3">
+          <li key={item.id}>
+            <div className="flex flex-row gap-3 bg-white p-2 rounded-md">
               <img
                 className=" h-[150px]  border-3 rounded-md border-[#c59d5f]"
                 src={item.addressImg}
@@ -178,9 +178,7 @@ function App() {
                   <h3 className="text-[#102a42] capitalize font-bold ">
                     {item.title}
                   </h3>
-                  <span className="text-[#c59d5f] font-bold">
-                    ${item.price}
-                  </span>
+                  <span className="text-[#c59d5f] font-bold">{item.price}</span>
                 </div>
                 <p className="item-description p-3 text-[#617d98]">
                   {item.description}
